@@ -2,6 +2,10 @@ import { User } from '@/components/User';
 import { Repo } from '@/components/Repo';
 import { Suspense } from 'react';
 
+export const metadata = {
+  title: 'Home',
+};
+
 export default async function Home() {
   return (
     <div>
