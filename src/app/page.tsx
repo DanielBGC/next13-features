@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
+export const revalidate = 30; // 30 seconds
+
 export default async function Home() {
   const response = await fetch('https://api.github.com/users/danielbgc', {
-    next: {
-      revalidate: 30,
-    },
+    cache: 'force-cache',
   });
   const user = await response.json();
 
