@@ -8,7 +8,6 @@ export default async function Home() {
       <h1>Home</h1>
 
       <Suspense fallback={<p>Loading User...</p>}>
-        {/* @ts-expect-error Async Server Component */}
         <User />
       </Suspense>
 
