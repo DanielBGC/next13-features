@@ -4,7 +4,7 @@ export const revalidate = 30; // 30 seconds
 
 export default async function Home() {
   const response = await fetch('https://api.github.com/users/danielbgc', {
-    cache: 'force-cache',
+    cache: 'no-store',
   });
   const user = await response.json();
 
